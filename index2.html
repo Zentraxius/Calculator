@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculator</title>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.5.1.js"></script>
+  <script src="js/scripts.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Calculator</h1>
+    <form id="calculator">
+      <div class="form-group">
+        <label for="input1">1st number:</label>
+        <input id="input1" class="form-control" type="text">
+      </div>
+      <div class="form-group">
+        <label for="input2">2nd number:</label>
+        <input id="input2" class="form-control" type="text">
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="operator" value="add" checked>
+          add
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="operator" value="subtract">
+          subtract
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="operator" value="multiply">
+          multiply
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="operator" value="divide">
+          divide
+        </label>
+      </div>
+      <button type="submit" class="btn">Go!</button>
+    </form>
+    <div id="output">
+
+    </div>
+  </div>
+</body>
+
+</html>
+
+<!-- // Business Logic:
+
+var add = function(number1, number2) {
+  return number1 + number2;
+};
+
+var subtract = function(number1, number2) {
+  return number1 - number2;
+};
+
+var multiply = function(number1, number2) {
+  return number1 * number2;
+};
+
+var divide = function(number1, number2) {
+  return number1 / number2;
+};
+
+// $(document).ready(function() {
+//   $("form#add").submit(function(event) {
+//     event.preventDefault();
+//     var number1 = parseInt($("#add1").val());
+//     var number2 = parseInt($("#add2").val());
+//     var result = add(number1, number2);
+//     $("#output").text(result);
+//   });
+// });
+
+// $(document).ready(function() {
+//   $("form#subtract").submit(function(event) {
+//     event.preventDefault();
+//     var number1 = parseInt($("#subtract1").val());
+//     var number2 = parseInt($("#subtract2").val());
+//     var result = subtract(number1, number2);
+//     $("#output1").text(result);
+//   });
+// });
+
+// Everything below this line is User Interface Logic
+$(document).ready(function() {
+  $("form#calculator").submit(function() {
+    event.preventDefault();
+    var number1 = parseInt($("#input1").val());
+    var number2 = parseInt($("#input2").val());
+    var operator = $("input:radio[name=operator]:checked").val();
+    var result;
+    if (operator === "add") {
+      result = add(number1, number2);
+    } else if (operator === "subtract") {
+      result = subtract(number1, number2);
+    } else if (operator === "multiply") {
+      result = multiply(number1, number2);
+    } else if (operator === "divide") {
+      result = divide(number1, number2);
+    }
+    $("#output").text(result);
+  });
+}); -->
